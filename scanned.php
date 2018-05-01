@@ -3,7 +3,7 @@
 include('connect.php');
 //scanned and read into database
 include("./includes/data.php");
-session_start();
+include (dirname(__FILE__).'/includes/guest_header.php');
 //set $type variable for testing to VOL
 unset ($log_phone);
 $last_name=$_SESSION['l_name'];
@@ -25,7 +25,7 @@ $dateout = date('Y-m-d H:i:s');
 } else {
 $dateout =date('Y-m-d H:i:s',$flxcode);
 }
-include (dirname(__FILE__).'/includes/guest_header.php');
+
 
 if ($bctype==1) {  // check if fixed barcodes
 //check barcode validity
@@ -73,9 +73,9 @@ if ($status_chk == 1 && $bctype==1) {   ///modified for bctype
   echo "<meta http-equiv='refresh' content='0;url=./barcode.php?check=\"used\"'>";
 } else {
 // if barcode not is use
-if ($_SESSION['cell'] !='') {
+if ($cell !='') {
   $log_phone=$cell;
-}elseif ($_SESSION['phone']!=''){
+}elseif ($phone!=''){
   $log_phone=$phone;
 }else{
   $log_phone="no phone";

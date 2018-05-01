@@ -20,7 +20,7 @@ if ((strlen($phone) != 10)or(empty($lname))or(empty($fname))){
 
 }
 session_unset();
-session_start();
+
 $_SESSION['l_name'] = $lname;
 $_SESSION['f_name'] = $fname;
 $_SESSION['reason'] = $reason;
