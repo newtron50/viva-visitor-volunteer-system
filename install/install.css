@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.install_base {
+
+  width:60%;
+  background-color:#e3e5e0;
+  border: 2px solid #2C9AB7;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:10px;
+  padding-left:10px;
+  margin-top:60px;
+}
+.main {
+
+	background-color: #FFFFFF;
+	width: 90%;
+	padding-left: auto;
+	padding-right: auto;
+	border-bottom-width: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+.admin_btn{
+	-moz-box-shadow: 4px 6px 9px -4px #025170;
+	-webkit-box-shadow: 4px 6px 9px -4px #025170;
+	box-shadow: 4px 6px 9px -4px #025170;
+	background-color:#0087BD;
+	-moz-border-radius:34px;
+	-webkit-border-radius:34px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:15px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #742EA3;
+}
+.admin_btn:hover {
+	background-color:#0CB1F2;
+}
+.admin_btn:active {
+	position:relative;
+	top:1px;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
