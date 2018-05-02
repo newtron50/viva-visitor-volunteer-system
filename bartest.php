@@ -34,14 +34,13 @@ if ($v_type =='VIS') {
 } else {
   $vname = 'VOLUNTEER';
 }
-$pdf = new PDF_AutoPrint('L','mm',array($printsz_w,$printsz_l);
+$pdf->new PDF_AutoPrint('L','mm',array($printsz_w,$printsz_l));
 $pdf->AddPage();
 $pdf->SetMargins(0,0);
 $pdf->SetFont('Arial','B');
 $pdf->SetFontSize(16);
 $pdf->SetXY(17,6);
-$pdf->Write(0,$ssn);
-$pdf->Write(0," ");
+$pdf->Write(0,"SJA - ");
 $pdf->Write(0,$vname);
 $pdf->SetXY(10,14);
 $full_name=$f_name.' '.$l_name;

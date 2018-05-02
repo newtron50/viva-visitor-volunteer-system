@@ -5,7 +5,8 @@ include("./includes/data.php");
 $barcode = $_GET['barcode'];
 $admin_c=$_GET['admin'];
 $barcode =preg_replace('/\D/', '', $barcode);
-session_start();
+include (dirname(__FILE__).'/includes/guest_header.php');
+
 //check barcode validity
 if ($bctype==1){
 $chk_st=<<<SQL
@@ -40,7 +41,7 @@ $valid_tag=0;
 
 if ($valid_code==0 OR $valid_tag==0) {
 
-  include (dirname(__FILE__).'/includes/guest_header.php');
+
   echo '<meta http-equiv="refresh" content="4;url=./main.php">';
 
   echo '<br><center><h3>There was an barcode error.<br>Please advise your administrator of this error.</h3></center><br>';
@@ -110,7 +111,7 @@ function convertToHoursMins($time, $format = '%d:%s') {
 // ** end of function
 $diff_2 = convertToHoursMins($diff_1, '%02d:%02d');
 
-include (dirname(__FILE__).'/includes/guest_header.php');
+
 if (isset($admin_c)){
   echo '<meta http-equiv="refresh" content="2;url=./admin/admintest.php">';
 } else {

@@ -10,12 +10,19 @@ $last_name=$_SESSION['l_name'];
 $first_name=$_SESSION['f_name'];
 $user_id=$_SESSION['user_id'];
 $reason=$_SESSION['reason'];
+
+if ($bctype==1){
 $barcode=$_GET['barcode'];
+}
 $phone=$_SESSION['phone'];
 $cell=$_SESSION['cell'];
 $v_type=$_SESSION['v_type'];
+if ($fc!=2) {
 $vol_sub=$_SESSION['vol_sub'];
 $vol_class=$_SESSION['v_class'];
+} else {
+$vol_class='Visitor';
+}
 $bctype=$_SESSION['bctype'];
 $flxcode=$_SESSION['flxcode'];
 //set barcode status variable

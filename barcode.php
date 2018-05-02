@@ -1,5 +1,5 @@
 <?php
-session_start();
+include (dirname(__FILE__).'/includes/guest_header.php');
 include("./includes/data.php");
 //get global variables
 $l_name= $_SESSION['l_name'];
@@ -11,7 +11,7 @@ $v_type=$_SESSION['v_type'];
 $_SESSION['bctype']=$bctype;
 
 echo "<link href=\"./css/multiColumnTemplate.css\" rel=\"stylesheet\" type=\"text/css\">";
-include (dirname(__FILE__).'/includes/guest_header.php');
+
 if ($bctype ==1) {
 if (isset($_GET['check'])) {
   $used = 'Barcode Error -- Please try another badge';
