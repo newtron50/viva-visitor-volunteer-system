@@ -252,14 +252,14 @@ $pdf->SetXY (45,110);
 $pdf->SetFontSize(9);
 $pdf->Line(15,160,125,160);
 $pdf->SetXY (20,189);
-$pdf->Write(0,'~  Please check the SJA website for required hours  ~');
+
 $pdf->SetXY (10,194);
-$pdf->Write(0,'Service hours need to be completed and documented by May 31st, ');
+
 $pdf->Write(0,$year);
 
 $pdf->SetXY(10,203);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours');
 $z++;
 $pdf->Line(140,4,140,195);
 } else {// odd/even repeat**************************************************************
@@ -430,13 +430,13 @@ while($row_ttl5=$result_class5->fetch_array()) {
   $pdf->SetFontSize(9);
 $pdf->Line(150,160,265,160);
   $pdf->SetXY (160,189);
-  $pdf->Write(0,'~  Please check the SJA website for required hours  ~');
+
   $pdf->SetXY (148,194);
-  $pdf->Write(0,'Service hours need to be completed and documented by May 31st, ');
+
 $pdf->Write(0,$year);
 $pdf->SetXY(150,203);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours');
 $z++;
 }//end of even repeat
 }// foreach repeat

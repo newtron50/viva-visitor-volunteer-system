@@ -6,27 +6,7 @@ $phone= $_SESSION['phone'];
 $u_id = $_SESSION['user_id'];
 $v_type=$_SESSION['v_type'];
 $bubba1=$_GET['t'];
-/*require('./fpdf/fpdf.php');
-
-$pdf = new FPDF('L','mm',array(76.2,50.8));
-$pdf->AddPage();
-$pdf->SetFont('Arial');
-$pdf->SetFontSize(16);
-$pdf->SetXY(3,5);
-$pdf->Write(0,"SJA Catholic School");
-$pdf->SetXY(3,10);
-$pdf->Write(0,$f_name);
-$pdf->Write(0," ");
-$pdf->Write(0,$l_name);
-$pdf->SetXY(3,20);
-$pdf->Write(0,$bubba1);
-$pdf->AddFont('code39','','code39.php');
-$pdf->SetFont('code39');
-$pdf->SetFontSize(32);
-$pdf->SetXY(3,30);
-$bubba4='*'.$bubba1.'*';
-$pdf->Write(0,$bubba4);
-$pdf->Output();*/
+include('./includes/data.php');
 
 
 require('./fpdf/pdf_js.php');
@@ -54,7 +34,7 @@ if ($v_type =='VIS') {
 } else {
   $vname = 'VOLUNTEER';
 }
-$pdf = new PDF_AutoPrint('L','mm',array(76.2,50.8));
+$pdf = new PDF_AutoPrint('L','mm',array($printsz_w,$printsz_l);
 $pdf->AddPage();
 $pdf->SetMargins(0,0);
 $pdf->SetFont('Arial','B');

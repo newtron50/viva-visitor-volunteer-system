@@ -8,11 +8,6 @@
 </head>
 <body>
 <div class="container">
-<!--  <header>
-    <div class="primary_header">
-      <h1 class="title">Welcome to SJA Catholic School</h1>
-    </div>
-</header>-->
 
     <h2 class="noDisplay">Main Content</h2>
 

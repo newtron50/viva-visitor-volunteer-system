@@ -2,6 +2,7 @@
 include($_SERVER['DOCUMENT_ROOT'].'/visitor/connect.php');
 include($_SERVER['DOCUMENT_ROOT'].'/visitor/functions/session.php');
 include($_SERVER['DOCUMENT_ROOT'].'/visitor/includes/links.php');
+include($_SERVER['DOCUMENT_ROOT'].'/visitor/includes/data.php');
 require($_SERVER['DOCUMENT_ROOT'].'/visitor/fpdf/fpdf.php');
 // for testing
 
@@ -331,25 +332,25 @@ if (($act% 2) == 1){
 $pdf->Line(20,220,200,220);
 $pdf->SetXY (80,225);
   $pdf->SetFont('Arial','u');
-$pdf->Write(0,'Service Hour Requirements');
+//$pdf->Write(0,'Service Hour Requirements');
   $pdf->SetFont('Arial');
 $pdf->SetXY (66,230);
 $pdf->SetFontSize(10);
   $pdf->SetFont('Arial','i');
-$pdf->Write(0,'**Two Parent Families: 20 Development, 15 Fair Share');
+//$pdf->Write(0,'**Two Parent Families: 20 Development, 15 Fair Share');
 $pdf->SetXY (65,235);
-$pdf->Write(0,'Single Parent Families: 10 Development, 7.5 Fair Share');
+//$pdf->Write(0,'Single Parent Families: 10 Development, 7.5 Fair Share');
 $pdf->SetXY (68,240);
-$pdf->Write(0,'Preschool Families: 5 Development, 10 Fair Share');
+//$pdf->Write(0,'Preschool Families: 5 Development, 10 Fair Share');
 $pdf->SetFont('Arial');
 
 $pdf->SetXY (46,253);
-$pdf->Write(0,'Service hours need to be completed and documented by May 31, ');
+
 $pdf->Write(0,$year);
 
 $pdf->SetXY(55,260);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours');
 $z++;
 
 $ptt='/var/www/html/visitor/files/';

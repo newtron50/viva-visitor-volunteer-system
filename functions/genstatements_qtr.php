@@ -332,21 +332,21 @@ $pdf->SetFontSize(8);
 $pdf->Line(15,160,125,160);
 $pdf->SetXY (10,185);
   $pdf->SetFont('Arial','U');
-$pdf->Write(0,'Service Hour Requirements:');
+//$pdf->Write(0,'Service Hour Requirements:');
   $pdf->SetFont('Arial');
-$pdf->Write(0,' Two Parent Families: 20 Development , 15 Fair Share');
+//$pdf->Write(0,' Two Parent Families: 20 Development , 15 Fair Share');
 $pdf->SetXY (46,188);
-$pdf->Write(0,'Single Parent: 10 Development, 7.5 Fair Share');
+
 $pdf->SetXY (46,191);
-$pdf->Write(0,'Preschool Families: 5 Development, 10 Fair Share');
+
 $pdf->SetFontSize(9);
 $pdf->SetXY (10,196);
-$pdf->Write(0,'Service hours need to be completed and documented by May 31, ');
+
 $pdf->Write(0,$year);
 
 $pdf->SetXY(10,203);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours');
 $z++;
 $pdf->Line(140,4,140,195);
 } else {// odd/even repeat**************************************************************
@@ -599,20 +599,20 @@ while ($mt3 = $mh3->fetch_array()){
 $pdf->Line(150,160,265,160);
 $pdf->SetXY (148,185);
   $pdf->SetFont('Arial','U');
-$pdf->Write(0,'Service Hour Requirements:');
+//$pdf->Write(0,'Service Hour Requirements:');
   $pdf->SetFont('Arial');
-$pdf->Write(0,' Two Parent Families: 20 Development , 15 Fair Share');
+//$pdf->Write(0,' Two Parent Families: 20 Development , 15 Fair Share');
 $pdf->SetXY (189,188);
-$pdf->Write(0,'Single Parent: 10 Development, 7.5 Fair Share');
+
 $pdf->SetXY (189,191);
-$pdf->Write(0,'Preschool Families: 5 Development, 10 Fair Share');
+
 $pdf->SetFontSize(9);
   $pdf->SetXY (148,196);
-  $pdf->Write(0,'Service hours need to be completed and documented by May 31, ');
+
 $pdf->Write(0,$year);
 $pdf->SetXY(150,203);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours');
 $z++;
 }//end of even repeat
 }// foreach repeat

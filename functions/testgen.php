@@ -3,7 +3,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/visitor/connect.php');
 include($_SERVER['DOCUMENT_ROOT'].'/visitor/functions/session.php');
 include($_SERVER['DOCUMENT_ROOT'].'/visitor/includes/links.php');
 require($_SERVER['DOCUMENT_ROOT'].'/visitor/fpdf/fpdf.php');
-
+include($_SERVER['DOCUMENT_ROOT'].'/visitor/includes/data.php');
 $reportmonth=2;
 $reportyear=2017;
 
@@ -258,14 +258,16 @@ $act++;
 $pdf->SetFontSize(9);
 $pdf->Line(15,160,125,160);
 $pdf->SetXY (20,189);
-$pdf->Write(0,'~  Please check the SJA website for requirements  ~');
+$pdf->Write(0,'~  Please check the ');
+$pdf->Write(0,$ssn);
+$pdf->Write(0,' website for requirements  ~');
 $pdf->SetXY (10,194);
-$pdf->Write(0,'Service hours need to be completed and documented by May 31st, ');
 $pdf->Write(0,$year);
 
 $pdf->SetXY(10,203);
 $pdf->SetFontSize(16);
-$pdf->Write(0,'Thank you for your service hours at SJA');
+$pdf->Write(0,'Thank you for your service hours at ');
+$pdf->Write(0,$ssn);
 $z++;
 $pdf->Line(140,4,140,195);
 $ptt='/var/www/html/visitor/files/';

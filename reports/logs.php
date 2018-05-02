@@ -4,8 +4,6 @@
 include('../connect.php');
 include('../functions/session.php');
 include('../functions/header.php');
-$connection=Mysql_connect('localhost','sjaadmin','stjohns159pxb2');
-Mysql_select_db('visitor',$connection);
 
 //check if the starting row variable was passed in the URL or not
 if (!isset($_GET['startrow']) or !is_numeric($_GET['startrow'])) {
