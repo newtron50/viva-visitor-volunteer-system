@@ -34,7 +34,7 @@ if ($v_type =='VIS') {
 } else {
   $vname = 'VOLUNTEER';
 }
-$pdf->new PDF_AutoPrint('L','mm',array($printsz_w,$printsz_l));
+$pdf = new PDF_AutoPrint('L','mm',array($printsz_w,$printsz_l));
 $pdf->AddPage();
 $pdf->SetMargins(0,0);
 $pdf->SetFont('Arial','B');
